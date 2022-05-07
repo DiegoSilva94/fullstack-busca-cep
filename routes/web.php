@@ -14,5 +14,6 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return view('index');
 });
+$router->get('/busca/{cep:[0-9]{8}}','BuscaCepController@busca');
